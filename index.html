@@ -412,11 +412,61 @@
     });
   });
 </script>
+<!-- Responsive Style Tambahan -->
+<style>
+/* Hilangkan scroll horizontal */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
 
+/* Untuk layar tablet & HP */
+@media (max-width: 768px) {
+  .carousel-caption h2 {
+    font-size: 20px !important;
+  }
+  .carousel-caption h3 {
+    font-size: 14px !important;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+  .carousel-caption .display-1 {
+    font-size: 32px !important;
+    line-height: 1.2;
+  }
+}
+
+/* Untuk layar sangat kecil (hp < 480px) */
+@media (max-width: 480px) {
+  .carousel-caption h2 {
+    font-size: 16px !important;
+  }
+  .carousel-caption h3 {
+    font-size: 12px !important;
+    padding: 0 8px;
+  }
+  .carousel-caption .display-1 {
+    font-size: 26px !important;
+  }
+}
+</style>
+<!-- End Responsive Style -->
+
+<script>
+  $(document).ready(function () {
+    // Tutup navbar otomatis setelah klik link (mobile)
+    $('.navbar-nav a').on('click', function () {
+      if ($('.navbar-toggler').is(':visible')) {
+        $('.navbar-collapse').collapse('hide');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
 
 </body>
+
 
 </html>
